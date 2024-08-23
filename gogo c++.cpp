@@ -21,4 +21,11 @@ if (_mkdir(dirName.c_str()) == 0) {
         std::cout << "\nFailed to Create Directory '" << dirName << "'\n";
 }
 
-   
+   system("pause");
+}
+
+void changeDirectory() {
+    char currentDir[FILENAME_MAX];
+    _getcwd(currentDir, sizeof(currentDir));
+    std::cout << "\nCurrent Directory: " << currentDir << '\n';
+
